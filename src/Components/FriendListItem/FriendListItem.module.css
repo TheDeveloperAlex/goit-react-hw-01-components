@@ -1,0 +1,41 @@
+.item {
+  background-color: yellowgreen;
+  border-radius: 5px;
+  width: 500px;
+  height: 100px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.spanRed {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.spanGreen {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.userName {
+  font-size: 30px;
+  font-weight: bold;
+}

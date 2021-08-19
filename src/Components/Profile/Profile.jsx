@@ -1,21 +1,27 @@
-
-
+// import {card, img, description, userName, userTag, userLocation, list, item} from './Profile.module.css';
+import s from './Profile.module.css';
+import PropTypes from 'prop-types';
 const Profile = ({ avatar, name, tag, location, stats }) => {
-    // console.log(avatar, name, tag, location, stats);
+    // console.log(stats);
+    const arr = Object.entries(stats);
+    // console.log(arr);
     return (
-        <section>
+        <section className={s.section}>
             <h1>Profile</h1>
-            <div>
-                <div>
-                    <img src={avatar} alt="avatar" />
-                    <p>{name}</p>
-                    <p>@{tag}</p>
-                    <p>{location}</p>
+            <div className={s.card}>
+                <div className={s.description}>
+                    <img src={avatar} alt="avatar" className={s.img} />
+                    <p className={s.userName}>{name}</p>
+                    <p className={s.userTag}>@{tag}</p>
+                    <p className={s.userLocation}>{location}</p>
                 </div>
-                <ul>
-                    <li><span>Followers</span> <span>{stats.followers}</span></li>
-                    <li><span>Views</span> <span>{stats.views}</span></li>
-                    <li><span>Likes</span> <span>{stats.likes}</span></li>
+                <ul className={s.list}>
+                    {arr.map(item => (
+                        <li className={s.item} key={item[0]}>
+                            <span className={s.span}>{item[0]}</span>
+                        <span>{item[1]}</span>
+                    </li>
+                    ))}
                 </ul>
             </div>
         </section>
@@ -24,4 +30,13 @@ const Profile = ({ avatar, name, tag, location, stats }) => {
     )
 }
 
+Profile.propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    stats: PropTypes.object,
+}
+
 export default Profile;
+
