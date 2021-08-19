@@ -1,0 +1,14 @@
+.tr:not(:nth-child(2n)) {
+  background-color: whitesmoke;
+}
+
+.tr:nth-child(2n) {
+  background-color: white;
+}
+
+.td {
+  text-align: center;
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 10px;
+}

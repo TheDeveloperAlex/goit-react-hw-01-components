@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
     
-    // console.log(avatar, name, isOnline );
     return (
 
         <li className={s.item}>

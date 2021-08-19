@@ -2,9 +2,7 @@
 import s from './Profile.module.css';
 import PropTypes from 'prop-types';
 const Profile = ({ avatar, name, tag, location, stats }) => {
-    // console.log(stats);
     const arr = Object.entries(stats);
-    // console.log(arr);
     return (
         <section className={s.section}>
             <h1>Profile</h1>

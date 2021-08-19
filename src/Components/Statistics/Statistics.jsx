@@ -1,17 +1,14 @@
 import s from './Statistics.module.css';
 import PropTypes from 'prop-types';
+import StatisticsItem from './StatisticsItem/StatisticsItem';
 
 const Statistics = ({ title, stats }) => {
     return (
         <section className={s.section}>
             {title && <h2 className={s.header}>{title}</h2>}
             <ul className={s.list}>
-                {stats.map(e => (
-                    <li key={e.id} className={s.item} >
-                        <span className={s.span}>{e.label}</span>
-                        <span>{e.percentage}</span>
-                    </li>
-                    
+                {stats.map(({ id, label, percentage }) => (
+                    <StatisticsItem label={label} percentage={percentage} key={id} />
                 ))}
                 </ul>
         </section>
